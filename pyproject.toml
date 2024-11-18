@@ -1,0 +1,23 @@
+[project]
+name = "wsserver"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "douyinlivewebfetcher",
+    "fastapi[standard]>=0.115.0",
+    "janus>=1.0.0",
+]
+
+[tool.uv.workspace]
+members = ["packages/douyinlivewebfetcher"]
+
+[tool.uv.sources]
+douyinlivewebfetcher = { workspace = true }
+
+[tool.ruff]
+extend-exclude = ["packages/douyinlivewebfetcher"]
+line-length = 160
+target-version = "py310"
+

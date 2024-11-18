@@ -1,0 +1,23 @@
+[project]
+name = "douyinlivewebfetcher"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "betterproto==2.0.0b6",
+    "pyexecjs==1.5.1",
+    "requests==2.31.0",
+    "websocket-client==1.7.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.ruff]
+include = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/douyinlivewebfetcher"]
